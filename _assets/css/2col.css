@@ -1,0 +1,6 @@
+#cols {position:relative; margin:15px 0; padding-right:15px; background:url("../design/content.gif") 230px 0 repeat-y;}
+#aside {float:left; width:215px; margin-right:0; display:none;}
+#content {margin-left:232px; overflow:visible;}
+
+html>body #aside {margin-right:30px;}
+html>body #content {margin-left:0; overflow:hidden;}

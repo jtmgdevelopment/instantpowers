@@ -1,0 +1,570 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-language" content="en" />
+	<meta name="robots" content="noindex,nofollow" />
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="css/reset.css" /> <!-- RESET -->
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="css/main.css" /> <!-- MAIN STYLE SHEET -->
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="css/2col.css" title="2col" /> <!-- DEFAULT: 2 COLUMNS -->
+	<link rel="alternate stylesheet" media="screen,projection" type="text/css" href="css/1col.css" title="1col" /> <!-- ALTERNATE: 1 COLUMN -->
+	<!--[if lte IE 6]><link rel="stylesheet" media="screen,projection" type="text/css" href="css/main-ie6.css" /><![endif]--> <!-- MSIE6 -->
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="css/style.css" /> <!-- GRAPHIC THEME -->
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="css/mystyle.css" /> <!-- WRITE YOUR CSS CODE HERE -->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.switcher.js"></script>
+	<script type="text/javascript" src="js/toggle.js"></script>
+	<title>Adminizio &ndash; Calendar (vertical)</title>
+</head>
+
+<body>
+
+<div id="main">
+
+	<!-- Tray -->
+	<div id="tray" class="box">
+
+		<p class="f-left box">
+
+			<!-- Switcher -->
+			<span class="f-left" id="switcher">
+				<a href="#" rel="1col" class="styleswitch ico-col1" title="Display one column"><img src="design/switcher-1col.gif" alt="1 Column" /></a>
+				<a href="#" rel="2col" class="styleswitch ico-col2" title="Display two columns"><img src="design/switcher-2col.gif" alt="2 Columns" /></a>
+			</span>
+
+			Project: <strong>Your Project</strong>
+
+		</p>
+
+		<p class="f-right">User: <strong><a href="#">Administrator</a></strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong><a href="#" id="logout">Log out</a></strong></p>
+
+	</div> <!--  /tray -->
+
+	<hr class="noscreen" />
+
+	<!-- Menu -->
+	<div id="menu" class="box">
+
+		<ul class="box f-right">
+			<li><a href="#"><span><strong>Visit Site &raquo;</strong></span></a></li>
+		</ul>
+
+		<ul class="box">
+			<li id="menu-active"><a href="#"><span>Lorem ipsum</span></a></li> <!-- Active -->
+			<li><a href="#"><span>Lorem ipsum</span></a></li>
+			<li onmouseover="this.className = 'dropdown-on'" onmouseout="this.className = 'dropdown-off'"><div><a href="#"><span>Lorem ipsum</span></a>
+				<!-- Dropdown menu -->
+				<div class="drop">
+					<ul class="box">
+						<li><a href="#">Lorem ipsum</a></li>
+						<li><a href="#">Lorem ipsum</a></li>
+						<li><a href="#">Lorem ipsum</a></li>
+						<li><a href="#">Lorem ipsum</a></li>
+						<li><a href="#">Lorem ipsum</a></li>
+					</ul>
+				</div> <!-- /drop -->
+			</div></li>
+			<li onmouseover="this.className = 'dropdown-on'" onmouseout="this.className = 'dropdown-off'"><div><a href="#"><span>Lorem ipsum</span></a>
+				<!-- Dropdown menu -->
+				<div class="drop">
+					<ul class="box">
+						<li><a href="#">Lorem ipsum</a></li>
+						<li><a href="#">Lorem ipsum</a></li>
+						<li><a href="#">Lorem ipsum</a></li>
+						<li><a href="#">Lorem ipsum</a></li>
+						<li><a href="#">Lorem ipsum</a></li>
+						<li><a href="#">Lorem ipsum</a></li>
+						<li><a href="#">Lorem ipsum</a></li>
+					</ul>
+				</div> <!-- /drop -->
+			</div></li>
+			<li onmouseover="this.className = 'dropdown-on'" onmouseout="this.className = 'dropdown-off'"><div><a href="#"><span>Lorem ipsum</span></a>
+				<!-- Dropdown menu -->
+				<div class="drop">
+					<ul class="box">
+						<li><a href="#">Lorem ipsum</a></li>
+						<li><a href="#">Lorem ipsum</a></li>
+						<li><a href="#">Lorem ipsum</a></li>
+					</ul>
+				</div> <!-- /drop -->
+			</div></li>
+			<li><a href="#"><span>Lorem ipsum</span></a></li>
+			<li><a href="#"><span>Lorem ipsum</span></a></li>
+		</ul>
+
+	</div> <!-- /header -->
+
+	<hr class="noscreen" />
+
+	<!-- Columns -->
+	<div id="cols" class="box">
+
+		<!-- Aside (Left Column) -->
+		<div id="aside" class="box">
+
+			<div class="padding box">
+
+				<!-- Logo (Max. width = 200px) -->
+				<p id="logo"><a href="#"><img src="tmp/logo.gif" alt="Our logo" title="Visit Site" /></a></p>
+
+				<!-- Search -->
+				<form action="#" method="get" id="search">
+					<fieldset>
+						<legend>Search</legend>
+
+						<p><input type="text" size="17" name="" class="input-text" />&nbsp;<input type="submit" value="OK" class="input-submit-02" /><br />
+						<a href="javascript:toggle('search-options');" class="ico-drop">Advanced search</a></p>
+
+						<!-- Advanced search -->
+						<div id="search-options" style="display:none;">
+
+							<p>
+								<label><input type="checkbox" name="" checked="checked" /> Option I.</label><br />
+								<label><input type="checkbox" name="" /> Option II.</label><br />
+								<label><input type="checkbox" name="" /> Option III.</label>
+							</p>
+
+						</div> <!-- /search-options -->
+
+					</fieldset>
+				</form>
+
+				<!-- Create a new project -->
+				<p id="btn-create" class="box"><a href="#"><span>Create a new project</span></a></p>
+
+			</div> <!-- /padding -->
+
+			<ul class="box">
+				<li><a href="#">Lorem ipsum</a></li>
+				<li><a href="#">Lorem ipsum</a></li>
+				<li><a href="#">Lorem ipsum</a></li>
+				<li id="submenu-active"><a href="#">Active Page</a> <!-- Active -->
+					<ul>
+						<li><a href="#">Lorem ipsum</a></li>
+						<li><a href="#">Lorem ipsum</a></li>
+						<li><a href="#">Lorem ipsum</a></li>
+						<li><a href="#">Lorem ipsum</a></li>
+						<li><a href="#">Lorem ipsum</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Lorem ipsum</a></li>
+				<li><a href="#">Lorem ipsum</a>
+					<ul>
+						<li><a href="#">Lorem ipsum</a></li>
+						<li><a href="#">Lorem ipsum</a></li>
+						<li><a href="#">Lorem ipsum</a></li>
+					</ul>
+                </li>
+				<li><a href="#">Lorem ipsum</a></li>
+			</ul>
+
+		</div> <!-- /aside -->
+
+		<hr class="noscreen" />
+
+		<!-- Content (Right Column) -->
+		<div id="content" class="box">
+
+			<h1>Calendar (vertical)</h1>
+
+			<!-- Month -->
+			<div class="nav-top box">
+
+				<div class="col33"><a href="#">&laquo; January 2009</a></div>
+				
+				<div class="col33 center t-center bigger"><strong>February 2009 (Week #6)</strong></div>
+
+				<div class="col33 t-right"><a href="#">March 2009 &raquo;</a></div>
+
+			</div> <!-- /nav-top -->
+
+			<!-- Button: Submit Note -->
+			<p class="box"><a href="javascript:toggle('submit');" class="btn-create"><span>Submit Note</span></a></p>
+
+			<!-- Submit -->
+			<div id="submit" class="box-01 box" style="display:none;">
+
+				<form action="#" method="post">
+
+				<p class="nomt ico-list"><a href="javascript:toggle('today');">Today</a> or <a href="javascript:toggle('anotherday');">another day</a></p>
+
+				<table class="nostyle">
+					<tr id="today" style="display:none;">
+						<td class="t-right"><strong>Today:</strong></td>
+						<td>
+							<select class="input-text">
+								<option>January</option>
+								<option selected="selected">February</option>
+								<option>March</option>
+								<option>April</option>
+								<option>May</option>
+								<option>June</option>
+								<option>July</option>
+								<option>August</option>
+								<option>September</option>
+								<option>October</option>
+								<option>November</option>
+								<option>December</option>
+							</select>
+							<select class="input-text">
+								<option>01</option>
+								<option>02</option>
+								<option>03</option>
+								<option>04</option>
+								<option>05</option>
+								<option>06</option>
+								<option>07</option>
+								<option>08</option>
+								<option selected="selected">09</option>
+								<option>10</option>
+								<option>11</option>
+								<option>12</option>
+								<option>13</option>
+								<option>14</option>
+								<option>15</option>
+								<option>16</option>
+								<option>17</option>
+								<option>18</option>
+								<option>19</option>
+								<option>20</option>
+								<option>21</option>
+								<option>22</option>
+								<option>23</option>
+								<option>24</option>
+								<option>25</option>
+								<option>26</option>
+								<option>27</option>
+								<option>28</option>
+								<option>29</option>
+								<option>30</option>
+								<option>31</option>
+							</select>
+						</td>
+					</tr>
+					<tr id="anotherday" style="display:none;">
+						<td class="t-right"><strong>Another day:</strong></td>
+						<td>
+							<select class="input-text">
+								<option>January</option>
+								<option>February</option>
+								<option>March</option>
+								<option>April</option>
+								<option>May</option>
+								<option>June</option>
+								<option>July</option>
+								<option>August</option>
+								<option>September</option>
+								<option>October</option>
+								<option>November</option>
+								<option>December</option>
+							</select>
+							<select class="input-text">
+								<option>01</option>
+								<option>02</option>
+								<option>03</option>
+								<option>04</option>
+								<option>05</option>
+								<option>06</option>
+								<option>07</option>
+								<option>08</option>
+								<option>09</option>
+								<option>10</option>
+								<option>11</option>
+								<option>12</option>
+								<option>13</option>
+								<option>14</option>
+								<option>15</option>
+								<option>16</option>
+								<option>17</option>
+								<option>18</option>
+								<option>19</option>
+								<option>20</option>
+								<option>21</option>
+								<option>22</option>
+								<option>23</option>
+								<option>24</option>
+								<option>25</option>
+								<option>26</option>
+								<option>27</option>
+								<option>28</option>
+								<option>29</option>
+								<option>30</option>
+								<option>31</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td class="t-right" style="width:85px;"><strong>Start:</strong></td>
+						<td>
+							<select class="input-text">
+								<option>00</option>
+								<option>01</option>
+								<option>02</option>
+								<option>03</option>
+								<option>04</option>
+								<option>05</option>
+								<option>06</option>
+								<option>07</option>
+								<option>08</option>
+								<option>09</option>
+								<option>10</option>
+								<option>11</option>
+								<option>12</option>
+								<option>13</option>
+								<option>14</option>
+								<option>15</option>
+								<option>16</option>
+								<option>17</option>
+								<option>18</option>
+								<option>19</option>
+								<option>20</option>
+								<option>21</option>
+								<option>22</option>
+								<option>23</option>
+							</select>
+							&nbsp;:&nbsp;
+							<select class="input-text">
+								<option>00</option>
+								<option>05</option>
+								<option>10</option>
+								<option>15</option>
+								<option>20</option>
+								<option>25</option>
+								<option>30</option>
+								<option>35</option>
+								<option>40</option>
+								<option>45</option>
+								<option>50</option>
+								<option>55</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td class="t-right"><strong>End:</strong></td>
+						<td>
+							<select class="input-text">
+								<option>00</option>
+								<option>01</option>
+								<option>02</option>
+								<option>03</option>
+								<option>04</option>
+								<option>05</option>
+								<option>06</option>
+								<option>07</option>
+								<option>08</option>
+								<option>09</option>
+								<option>10</option>
+								<option>11</option>
+								<option>12</option>
+								<option>13</option>
+								<option>14</option>
+								<option>15</option>
+								<option>16</option>
+								<option>17</option>
+								<option>18</option>
+								<option>19</option>
+								<option>20</option>
+								<option>21</option>
+								<option>22</option>
+								<option>23</option>
+							</select>
+							&nbsp;:&nbsp;
+							<select class="input-text">
+								<option>00</option>
+								<option>05</option>
+								<option>10</option>
+								<option>15</option>
+								<option>20</option>
+								<option>25</option>
+								<option>30</option>
+								<option>35</option>
+								<option>40</option>
+								<option>45</option>
+								<option>50</option>
+								<option>55</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td class="va-top t-right"><strong>Note:</strong></td>
+						<td colspan="2"><textarea cols="50" rows="5" class="input-text"></textarea></td>
+					</tr>
+					<tr>
+						<td class="t-right"><strong>Color label:</strong></td>
+						<td>
+							<select class="input-text">
+								<option>yellow</option>
+								<option>blue</option>
+								<option>green</option>
+								<option>red</option>
+								<option>grey</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><input type="submit" value="Submit" class="input-submit" /></td>
+					</tr>
+				</table>
+
+				</form>
+
+			</div> <!-- /submit -->
+
+			<!-- Calendar -->
+			<table id="calendar-02" class="width100">
+				<tr>
+					<th style="width:100px;">Monday<br />1/2/2009</th>
+					<td class="note-01">
+						<div class="day-actions box">
+							Actions:
+							<a href="#" class="ico-list">Create</a>
+							<a href="#" class="ico-delete">Delete all</a>
+						</div>
+						<ul class="nostyle">
+							<li><strong>08:00-10:30</strong><br />Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br /><a href="#" class="ico-edit">Edit</a> &nbsp;<a href="#" class="ico-delete">Delete</a></li>
+							<li><strong>11:00-12:30</strong><br />Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br /><a href="#" class="ico-edit">Edit</a> &nbsp;<a href="#" class="ico-delete">Delete</a></li>
+							<li><strong>15:00-17:15</strong><br />Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br /><a href="#" class="ico-edit">Edit</a> &nbsp;<a href="#" class="ico-delete">Delete</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<th>Tuesday<br />2/2/2009</th>
+					<td>
+						<p>Nothing. <a href="#" class="ico-list">Create</a></p>
+					</td>
+				</tr>
+				<tr>
+					<th>Wednesday<br />3/2/2009</th>
+					<td>
+						<p>Nothing. <a href="#" class="ico-list">Create</a></p>
+					</td>
+				</tr>
+				<tr>
+					<th>Thursday<br />4/2/2009</th>
+					<td>
+						<p>Nothing. <a href="#" class="ico-list">Create</a></p>
+					</td>
+				</tr>
+				<tr>
+					<th>Friday<br />5/2/2009</th>
+					<td class="note-02" rowspan="2">
+						<div class="day-actions box">
+							Actions:
+							<a href="#" class="ico-list">Create</a>
+							<a href="#" class="ico-delete">Delete all</a>
+						</div>
+						<ul class="nostyle">
+							<li><strong>15:05-15:55</strong><br />Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br /><a href="#" class="ico-edit">Edit</a> &nbsp;<a href="#" class="ico-delete">Delete</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<th>Saturday<br />6/2/2009</th>
+				</tr>
+				<tr>
+					<th>Sunday<br />7/2/2009</th>
+					<td>
+						<p>Nothing. <a href="#" class="ico-list">Create</a></p>
+					</td>
+				</tr>
+				<tr>
+					<th>Monday<br />8/2/2009</th>
+					<td class="note-03">
+						<div class="day-actions box">
+							Actions:
+							<a href="#" class="ico-list">Create</a>
+							<a href="#" class="ico-delete">Delete all</a>
+						</div>
+						<ul class="nostyle">
+							<li><strong>08:00-10:30</strong><br />Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br /><a href="#" class="ico-edit">Edit</a> &nbsp;<a href="#" class="ico-delete">Delete</a></li>
+							<li><strong>11:00-12:30</strong><br />Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br /><a href="#" class="ico-edit">Edit</a> &nbsp;<a href="#" class="ico-delete">Delete</a></li>
+							<li><strong>15:00-17:15</strong><br />Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br /><a href="#" class="ico-edit">Edit</a> &nbsp;<a href="#" class="ico-delete">Delete</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<th>Tuesday<br />9/2/2009</th>
+					<td>
+						<p>Nothing. <a href="#" class="ico-list">Create</a></p>
+					</td>
+				</tr>
+				<tr>
+					<th>Wednesday<br />10/2/2009</th>
+					<td>
+						<p>Nothing. <a href="#" class="ico-list">Create</a></p>
+					</td>
+				</tr>
+				<tr>
+					<th>Thursday<br />11/2/2009</th>
+					<td>
+						<p>Nothing. <a href="#" class="ico-list">Create</a></p>
+					</td>
+				</tr>
+				<tr>
+					<th>Friday<br />12/2/2009</th>
+					<td class="note-02">
+						<div class="day-actions box">
+							Actions:
+							<a href="#" class="ico-list">Create</a>
+							<a href="#" class="ico-delete">Delete all</a>
+						</div>
+						<ul class="nostyle">
+							<li><strong>15:05-15:55</strong><br />Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br /><a href="#" class="ico-edit">Edit</a> &nbsp;<a href="#" class="ico-delete">Delete</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<th>Saturday<br />13/2/2009</th>
+					<td class="note-04">
+						<div class="day-actions box">
+							Actions:
+							<a href="#" class="ico-list">Create</a>
+							<a href="#" class="ico-delete">Delete all</a>
+						</div>
+						<ul class="nostyle">
+							<li><strong>15:05-15:55</strong><br />Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br /><a href="#" class="ico-edit">Edit</a> &nbsp;<a href="#" class="ico-delete">Delete</a></li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<th>Sunday<br />14/2/2009</th>
+					<td>
+						<p>Nothing. <a href="#" class="ico-list">Create</a></p>
+					</td>
+				</tr>
+			</table>
+			
+			<p class="t-center">etc&hellip;</p>
+
+			<!-- Month -->
+			<div class="nav-bottom box">
+
+				<div class="col33"><a href="#">&laquo; January 2009</a></div>
+
+				<div class="col33 center t-center bigger"><strong>February 2009 (Week #6)</strong></div>
+
+				<div class="col33 t-right"><a href="#">March 2009 &raquo;</a></div>
+
+			</div> <!-- /nav-top -->
+
+		</div> <!-- /content -->
+
+	</div> <!-- /cols -->
+
+	<hr class="noscreen" />
+
+	<!-- Footer -->
+	<div id="footer" class="box">
+
+		<p class="f-left">&copy; 2009 <a href="#">Your Company</a>, All Rights Reserved &reg;</p>
+
+		<p class="f-right">Templates by <a href="http://www.adminizio.com/">Adminizio</a></p>
+
+	</div> <!-- /footer -->
+
+</div> <!-- /main -->
+
+</body>
+</html>

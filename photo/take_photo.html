@@ -1,0 +1,202 @@
+<?xml version="1.0"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-language" content="en" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+	<meta name="robots" content="noindex,nofollow" />
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="/_assets/css/reset.css" /> 
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="/_assets/css/main.css" /> 
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="/_assets/css/1col.css" title="2col" /> 
+	<link rel="alternate stylesheet" media="screen,projection" type="text/css" href="/_assets/css/1col.css" title="1col" /> 
+	<!--[if lte IE 6]><link rel="stylesheet" media="screen,projection" type="text/css" href="/_assets/css/main-ie6.css" /><![endif]--> 
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="/_assets/css/style.css" /> 
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="/_assets/css/mystyle.css" /> 
+	<link rel="stylesheet" media="screen,projection" type="text/css" href="/_assets/css/jquery-ui-1.8.12.custom.css" /> 
+	<link type="text/css" rel="stylesheet" href="http://dev.is.com/_assets/uploadify/uploadify.css" />	<title>Security Image | Instant Powers</title>
+	<!--[if gte IE 9]>  <style type="text/css">.gradient {filter: none;}</style><![endif]-->
+	
+</head>
+<body>
+<div id="main"> 
+<!-- Tray -->
+<div id="tray" class="box">
+	<p class="f-left box">
+		<!-- Switcher 
+		<span class="f-left" id="switcher">
+		<a href="##" rel="1col" class="styleswitch ico-col1" title="Display one column">
+			<img src="/_assets/design/switcher-1col.gif" alt="1 Column" />
+		</a>
+		<a href="##" rel="2col" class="styleswitch ico-col2" title="Display two columns">
+			<img src="/_assets/design/switcher-2col.gif" alt="2 Columns" />
+		</a>
+		</span> <strong id="switcher-text">Open Sidebar</strong>
+		-->
+	</p>
+	<p class="f-right">
+		<strong>
+		<a href="/logout" id="logout">
+			Log out
+		</a>
+		</strong>
+	</p>
+</div>
+<!--  /tray -->
+<hr class="noscreen" />
+
+<!-- /header -->
+<hr class="noscreen" />
+<!-- Columns -->
+<div id="cols" class="box">
+	<!-- Aside (Left Column) -->
+	<div id="aside" class="box">
+		<div class="padding box">
+			<!-- Logo (Max. width = 200px) -->
+			<p id="logo">
+				<a href="##">
+				</a>
+			</p>
+			
+		</div>
+	</div>
+	<!-- /aside -->
+	<hr class="noscreen" />
+		<!-- Content (Right Column) -->
+	<div id="content" class="box">
+	<h1>Security Image</h1>
+	<h2>Security image required to upload offline power.</h2>
+	<div id="js-messages" class="msg" style="display:none;"></div>
+	<div id="camera"></div>
+<form>
+	<div class="clearfix"></div>
+	<input type=button value="Take Snapshot" onClick="take_snapshot()">
+	<input type="button" id="cancel" value="Cancel"  />
+</form>
+
+	<div id="upload_results"></div>
+	</div>
+	<!-- /content -->
+</div>
+<!-- /cols -->
+<hr class="noscreen" />
+<!-- Footer -->
+<div id="footer" class="box">
+	<p class="f-left">
+		&copy; 2011
+		<a href="#">
+			Instant Powers
+		</a>
+		, All Rights Reserved &reg;
+	</p> 
+</div>
+<!-- /footer -->
+</div>
+<!-- /main --> 
+<script type="text/javascript" src="/_assets/js/libs/jquerytools/jquerytools.min.js"></script>
+<script type="text/javascript" src="/_assets/js/libs/jqueryUI/js/jquery-ui-1.8.12.custom.min.js"></script>
+<script type="text/javascript" src="/_assets/js/libs/jqueryUI/js/jquery-ui-timepicker-addon.js"></script>
+<script type="text/javascript" src="/_assets/js/main.js"></script>
+<script type="text/javascript" src="http://dev.is.com/_assets/js/utils/underscore/underscore-min.js"></script><script type="text/javascript" src="http://dev.is.com/_assets/js/libs/inputMask/jquery.maskedinput-1.3.min.js"></script><script type="text/javascript" src="http://dev.is.com/_assets/js/powers/powers.js"></script><script type="text/javascript" src="http://dev.is.com/_assets/uploadify/jquery.uploadify-3.1.min.js"></script><script type="text/javascript">
+$(document).ready(function(){
+	var CSS 			= {'position':'fixed','top':0,'left':0,'width':'100%','height':'100%','background-color':'#000','z-index':'100','display':'none','opacity': 0.5};
+	var OVERLAY 		= $('<div id="overlay" style="z-index:1"></div>');
+	var LOADINGIMAGE 	= $( '<div class="callout" style="z-index:1000;width:400px; margin-top:-150px;"><h3>Please Be Patient While This Request Processes</h3><img style="z-index:1000" src="/_assets/img/loader.gif" alt="Loading" /></div>' );
+
+	$('form').submit(function(e){
+		OVERLAY.appendTo( document.body ).css( CSS ).fadeIn();
+		LOADINGIMAGE.center({offset: 200}).appendTo( document.body ).show();
+	});	
+	$(' a.load').click(function(e){
+		OVERLAY.appendTo( document.body ).css( CSS ).fadeIn();
+		LOADINGIMAGE.center({offset: 200}).appendTo( document.body ).show();
+	});
+	$( 'div#loading').css(CSS);
+	$( ".datepicker" ).datepicker();
+	$('.timepicker').timepicker({
+		ampm: true
+	});
+});
+</script>
+<script type="text/javascript" src="/photo/webcam.js"></script>
+<script language="JavaScript">
+		webcam.set_api_url( 'test.php' );
+		webcam.set_quality( 90 ); // JPEG quality (1 - 100)
+		webcam.set_shutter_sound( true ); // play shutter click sound
+</script>
+
+
+<script language="JavaScript">
+		document.getElementById('camera').innerHTML =  webcam.get_html(320, 240);
+</script>
+
+<!-- Code to handle the server response (see test.php) --> 
+<script language="JavaScript">
+
+		webcam.set_hook( 'onComplete', 'my_completion_handler' );
+		
+		function take_snapshot() {
+			// take snapshot and upload to server
+			document.getElementById('upload_results').innerHTML = '<div class="clearfix"></div><div class="msg info"><p>Uploading...</p></div>';
+			webcam.snap();
+		}
+		function getUrlVars() {
+			var vars = {};
+			var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+				vars[key] = value;
+			});
+			return vars;
+		}
+
+		
+		function my_completion_handler(msg) {
+			// extract URL out of PHP output
+			if (msg.match(/(http\:\/\/\S+)/)) {
+				var image_url = RegExp.$1;
+				// show JPEG image in page
+				document.getElementById('upload_results').innerHTML = 
+					'<h3 class="tit">Upload Successful!</h3>' + 
+					'<img src="' + image_url + '">' + 
+					'<p class="box"><button class="btn-create" id="process-image"><span>Submit Photo</span></button>';
+				
+				var role = getUrlVars()['role'];
+					
+				var options = {
+					url 	: '/agent/offline_powers/process_photo',
+					type 	: 'POST',
+					data	: {
+						photo :  image_url	
+					},
+					success	: function( data )
+					{
+						
+					},
+					error : function( data )
+					{
+						
+					}
+						
+				};	
+					
+				
+				$.ajax( options );
+					
+				// reset camera for another shot
+				webcam.reset();
+			}
+			else alert("PHP Error: " + msg);
+		}
+		
+		$(document).ready(function(){
+			$( '#process-image' ).live( 'click', function(){
+				location.href = '/agent/offline_powers/index';	
+			});
+			
+			$( '#cancel' ).click( function(){
+				
+				location.href = '/agent/cpanel';	
+				
+			});
+		});
+	</script>
+
+</body></html>
