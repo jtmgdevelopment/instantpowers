@@ -1038,7 +1038,7 @@ class power_model extends MY_Model {
 		$sql .= 'WHERE 1 = 1 ';
 		
 		
-		if( isset( $trans_id ) ) $sql .= 'ip.transmission_id = ' . $this->db->escape( $trans_id );
+		if( isset( $trans_id ) ) $sql .= ' AND p.transmission_id = ' . $this->db->escape( $trans_id );
 		
 		if( isset( $power_id ) ) $sql .= ' AND power_id = ' . $this->db->escape( $power_id );
 		

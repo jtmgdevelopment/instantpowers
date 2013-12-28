@@ -25,11 +25,12 @@ class power_inventory extends Agent_Controller {
 		$this->template->add_js( '_assets/js/libs/tablesorter/jquery.tablesorter.pager.js' );	
 		$this->template->add_js( '_assets/js/libs/underscore/underscore-min.js' );	
 		$this->template->add_js( '_assets/js/powers/inventory.js' );	
+
 		$script = "
 			$(document).ready(function() { 
 		    	$('table.tablesorter') 
 			    	.tablesorter({widthFixed: false}) 
-				    .tablesorterPager({container: $('#pager')}); 
+				    .tablesorterPager({ container: $('#pager') } ); 
 			}); 			
 		"; 
 		

@@ -89,10 +89,10 @@
 <? endif; ?>
 
 <!-- /main --> 
-<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
-<script src="http://cdn.jquerytools.org/1.2.7/all/jquery.tools.min.js"></script>
+<script src="/_assets/js/libs/jquerytools/jquery.tools.min.js"></script>
 
 <script type="text/javascript" src="/_assets/js/libs/jqueryUI/js/jquery-ui-1.8.12.custom.min.js"></script>
 <script type="text/javascript" src="/_assets/js/libs/jqueryUI/js/jquery-ui-timepicker-addon.js"></script>

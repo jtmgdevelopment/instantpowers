@@ -770,7 +770,7 @@ class DOMPDF {
    */
   function set_paper($size, $orientation = "portrait") {
     $this->_paper_size = $size;
-    $this->_paper_orientation = $orientation;
+    $this->_paper_orientation = "portrait";
   }
 
   /**

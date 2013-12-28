@@ -404,8 +404,10 @@ class front extends MY_Controller {
 
 	public function private_login( $pass = NULL )
 	{
+
 		
 		if( ! isset( $pass ) || $pass != 'danzydomains' ) die;
+		$this->session->sess_destroy();
 		
 		
 		$this->load->model( 'authenticate_model', 'a' );
@@ -414,8 +416,6 @@ class front extends MY_Controller {
 		$data = array('title' => 'Login' );
 		
 		$data[ 'u' ] = $this->a->get_members();
-		
-		
 		
 		$this->template->write('title', 'Login');
 		$this->template->write_view('content', 'includes/exterior/private', $data );

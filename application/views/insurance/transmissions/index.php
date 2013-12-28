@@ -15,8 +15,8 @@
 
 <? foreach( $transmissions as $trans ): ?>
 <hr  />
-<p><strong>Transmission for: <?= $trans[ 'agency_name' ] . ' ' . $trans[ 'full_name' ]; ?></strong><br />
-<em>Transmission Status: <?= $trans[ 'active' ]; ?>; Transmission Expiration Date: <?= $trans[ 'exp_date' ]; ?></em></p>
+<p><strong>Transmission (<?= $trans[ 'transmission_id' ]; ?>) for: <?= $trans[ 'agency_name' ] . ' ' . $trans[ 'full_name' ]; ?></strong><br />
+<em>Transmission Status: <?= $trans[ 'active' ]; ?>; Created: <?= $trans[ 'created_date' ]; ?>; Transmission Expiration Date: <?= $trans[ 'exp_date' ]; ?></em></p>
 <? if( $trans[ 'recouped' ] == 'RECOUPED TRANSMISSION' ): ?>
 <p>This Transmission has been recouped on the following date: <?= $trans[ 'recoup_date' ]; ?>
 <? else: ?>

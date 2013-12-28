@@ -5,7 +5,8 @@ function pdf_create($html, $filename='', $stream=TRUE)
     
     $dompdf = new DOMPDF();
     $dompdf->load_html($html);
-    $dompdf->set_paper(array(0,0, 12 * 72, 12 * 72), 'portrait');
+    $dompdf->set_paper( 'letter', 'portrait');
+
     $dompdf->render();
     if ($stream) {
         $dompdf->stream($filename.".pdf");

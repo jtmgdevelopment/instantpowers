@@ -4,7 +4,7 @@
 //define("DOMPDF_UNICODE_ENABLED", false);
 //define("DOMPDF_PDF_BACKEND", "PDFLib");
 //define("DOMPDF_DEFAULT_MEDIA_TYPE", "print");
-define("DOMPDF_DEFAULT_PAPER_SIZE", "A4");
+define("DOMPDF_DEFAULT_PAPER_SIZE", "letter");
 //define("DOMPDF_DEFAULT_FONT", "serif");
 //define("DOMPDF_DPI", 72);
 //define("DOMPDF_ENABLE_PHP", true);

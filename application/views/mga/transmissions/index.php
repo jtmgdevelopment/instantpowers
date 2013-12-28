@@ -30,7 +30,7 @@ div.row:nth-child(even){
 <div class="row">
 <hr  />
 <p>
-<em>Transmission Status: <?= $trans[ 'active' ]; ?>; Transmission Expiration Date: <?= $trans[ 'exp_date' ]; ?></em>
+<em>Transmission ( <?= $trans[ 'transmission_id' ]; ?> ) Status: <?= $trans[ 'active' ]; ?>; Transmission Expiration Date: <?= $trans[ 'exp_date' ]; ?></em>
 <br /><em>Transmission Created Date: <?= $trans[ 'created_date' ]; ?></em>
 </p>
 <? if( $trans[ 'paid' ] == 'Paid' ): ?>	

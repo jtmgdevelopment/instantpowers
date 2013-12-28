@@ -187,6 +187,7 @@ class transmissions_model extends MY_Model {
 			select transmission_id, m.full_name, mga.company_name, 
 			DATE_FORMAT( t.exp_date, '%c/%e/%Y' )  as exp_date,			
 			DATE_FORMAT( t.recoup_date, '%c/%e/%Y' )  as recoup_date,			
+			DATE_FORMAT( t.created_date, '%c/%e/%Y' )  as created_date,			
 			case t.active
 			  when 1 then 'Active'
 			  when 0 then 'Not Active'
@@ -202,7 +203,9 @@ class transmissions_model extends MY_Model {
 			inner join member m on m.mek = t.mga_id 
 			inner join mgas as mga on mga.mek = m.mek
 			
-			where t.insurance_agent_id = ?				
+			where t.insurance_agent_id = ?	
+			
+			Order by created_date DESC			
 		";
 		$q = $this->db->query( $sql, array( $mek ) )->result_array();
 		
@@ -212,8 +215,8 @@ class transmissions_model extends MY_Model {
   		$sql = "
 			select distinct pp.prefix, pp.amount, 
 			DATE_FORMAT( t.exp_date, '%c/%e/%Y' )  as exp_date,
-			( select min( pek ) from power where transmission_id = t.transmission_id  ) as min_power,
-			( select max( pek ) from power where transmission_id = t.transmission_id  ) as max_power
+			( select min( pek ) from power where transmission_id = t.transmission_id and prefix_id = pp.prefix_id ) as min_power,
+			( select max( pek ) from power where transmission_id = t.transmission_id and prefix_id = pp.prefix_id ) as max_power
 			from power p
 			inner join transmission as t on t.transmission_id = p.transmission_id
 			inner join power_prefix as pp on pp.prefix_id = p.prefix_id
@@ -244,6 +247,8 @@ class transmissions_model extends MY_Model {
 			select transmission_id, m.full_name, b.agency_name, 
 			DATE_FORMAT( t.exp_date, '%c/%e/%Y' )  as exp_date,			
 			DATE_FORMAT( t.recoup_date, '%c/%e/%Y' )  as recoup_date,			
+			DATE_FORMAT( t.created_date, '%c/%e/%Y' )  as created_date,			
+			
 			case t.active
 			  when 1 then 'Active'
 			  when 0 then 'Not Active'
